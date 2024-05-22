@@ -18,11 +18,11 @@ $mail->isSMTP();
 $mail->SMTPAuth = true;
 
 $mail->Host = "smtp.gmail.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or PHPMailer::ENCRYPTION_SMTPS if you're using port 465
-$mail->Port = 587; // or 465
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = 587;
 
-$mail->Username = "ddagmax@gmail.com"; // your Gmail address
-$mail->Password = "hrokiehamevggwol"; // your Gmail password or app-specific password
+$mail->Username = "ddagmax@gmail.com";
+$mail->Password = "hrokiehamevggwol";
 
 $mail->setFrom($email, $name);
 $mail->addAddress("ddagmax@gmail.com", "Amerencio");
