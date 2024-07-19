@@ -23,4 +23,21 @@ function isElementInViewport(el) {
         }
     }
   });
-  
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Voorkom standaard form submit
+
+    // Verkrijg de waarden van de invoervelden
+    var name = document.getElementById('name').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+
+    // Combineer de waarden in een enkele string
+    var bodyContent = "Naam: " + name + "\nOnderwerp: " + subject + "\nBericht: " + message;
+
+    // Zet de gecombineerde string in het verborgen body inputveld
+    document.getElementById('body').value = bodyContent;
+
+    // Verstuur het formulier
+    this.submit();
+});
